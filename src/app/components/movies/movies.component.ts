@@ -1,12 +1,12 @@
 import { MovieService } from './../../services/movie.service';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css'],
 })
-export class MoviesComponent  {
+export class MoviesComponent implements OnInit ,  AfterViewInit  {
   movies: any = [];
   @ViewChild('search') searchRef?: ElementRef;
   constructor(private movieService: MovieService) {}

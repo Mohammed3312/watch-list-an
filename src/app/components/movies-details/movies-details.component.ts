@@ -1,5 +1,5 @@
 import { MovieService } from './../../services/movie.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './movies-details.component.html',
   styleUrls: ['./movies-details.component.css']
 })
-export class MoviesDetailsComponent {
+export class MoviesDetailsComponent implements OnInit {
   movie:any
   constructor(private movieserv:MovieService ,private route:ActivatedRoute ){}
 
